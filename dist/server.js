@@ -4,6 +4,8 @@ var express = require('express');
 var hbs = require('hbs');
 var fs = require('fs');
 
+var port = process.env.PORT || 3000;
+
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials');
@@ -54,7 +56,7 @@ app.get('/bad', function (req, res) {
     });
 });
 
-app.listen(3000, function () {
+app.listen(port, function () {
     console.log("server is up on port 3000");
 });
 //# sourceMappingURL=server.js.map
